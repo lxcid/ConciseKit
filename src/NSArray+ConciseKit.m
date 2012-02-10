@@ -1,4 +1,5 @@
 #import "NSArray+ConciseKit.h"
+#import "CKMacros.h"
 
 @implementation NSArray (ConciseKit)
 
@@ -56,6 +57,19 @@
     [array addObject:block(obj, idx)];
   }];
   return array;
+}
+
+
+- (id)$safeFirst {
+  return $safe([self objectAtIndex:0]);
+}
+
+- (id)$safeLast {
+  return $safe([self lastObject]);
+}
+
+- (id)$safeAt:(NSUInteger)index {
+  return $safe([self objectAtIndex:index]);
 }
 
 @end

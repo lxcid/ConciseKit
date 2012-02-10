@@ -3,6 +3,7 @@
 @interface NSDictionary (ConciseKit)
 
 - (id)$for:(id)aKey;
+- (id)$safeFor:(id)aKey;
 
 @end
 

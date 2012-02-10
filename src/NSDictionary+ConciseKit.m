@@ -1,9 +1,14 @@
 #import "NSDictionary+ConciseKit.h"
+#import "CKMacros.h"
 
 @implementation NSDictionary (ConciseKit)
 
 - (id)$for:(id)aKey {
   return [self objectForKey:aKey];
+}
+
+- (id)$safeFor:(id)aKey {
+  return $safe([self objectForKey:aKey]);
 }
 
 @end
