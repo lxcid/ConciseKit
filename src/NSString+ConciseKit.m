@@ -14,6 +14,10 @@
   return [self componentsSeparatedByString:aString];
 }
 
+- (BOOL)$isBlank {
+    return ([self length] == 0);
+}
+
 @end
 
 @implementation NSMutableString (ConciseKit)
